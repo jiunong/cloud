@@ -1,0 +1,20 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: nacos-provider-payment
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.80.131:8848
+  datasource:
+    name: cloud
+    driver-class-name: com.mysql.jdbc.Driver
+    url:  jdbc:mysql://192.168.80.131:3306/cloud?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: 1qaz
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
