@@ -9,9 +9,9 @@
     </parent>
     <packaging>jar</packaging>
 
-    <artifactId>cloud-provider-payment</artifactId>
+    <artifactId>cloud-provider-user</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cloud-provider-payment</name>
+    <name>cloud-provider-user</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -35,10 +35,36 @@
         <artifactId>druid</artifactId>
         <version>${druid.version}</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
+    <dependency>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-core</artifactId>
+        <version>${flyway.version}</version>
+    </dependency>
+
 </dependencies>
 
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.yml</include>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

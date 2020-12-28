@@ -1,4 +1,4 @@
-package com.sict.cloudproviderpayment.controller;
+package com.sict.cloud.user.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020/12/25 13:56
  */
 @RestController
-public class PaymentController {
+public class UserController {
 
     @Value("${server.port}")
     private String serverPort;
 
     @GetMapping(value = "/payment/nacos/{id}")
-    public String getPayment(@PathVariable("id") Integer id) {
+    public String getUser(@PathVariable("id") Integer id) {
         return "nacos registry, serverPort: " + serverPort + "id" + id;
     }
 }
