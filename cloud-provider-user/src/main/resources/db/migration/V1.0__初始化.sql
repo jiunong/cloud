@@ -1,7 +1,7 @@
 SET NAMES utf8;
 
 DROP DATABASE IF EXISTS cloud_user;
-CREATE DATABASE sc_admin DEFAULT CHARSET utf8mb4;
+CREATE DATABASE cloud_user DEFAULT CHARSET utf8mb4;
 USE cloud_user;
 
 -- 用户组表
