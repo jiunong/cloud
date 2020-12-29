@@ -35,11 +35,9 @@
         <artifactId>druid</artifactId>
         <version>${druid.version}</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
     <dependency>
         <groupId>org.flywaydb</groupId>
         <artifactId>flyway-core</artifactId>
-        <version>${flyway.version}</version>
     </dependency>
 
 </dependencies>
