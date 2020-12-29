@@ -2,6 +2,8 @@ package com.sict.cloud.user.model;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
@@ -10,7 +12,7 @@ import lombok.ToString;
  * @author  d
  */
 @Data
-@ToString
+@Builder
 public class UsersBO implements Serializable {
     /**
      * 用户id
