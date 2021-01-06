@@ -2,11 +2,17 @@ server:
   port: 9001
 spring:
   application:
-    name: nacos-provider-user
+    name: cloud-provider-user
   cloud:
     nacos:
       discovery:
         server-addr: 192.168.80.131:8848
+    gateway:
+      routes:
+        - id : user-router
+          uri: http://127.0.0.1:9001
+          predicates :
+            - After=2018-01-20T06:06:06+08:00[Asia/Shanghai]
   datasource:
     name: cloud_user
     driver-class-name: com.mysql.jdbc.Driver

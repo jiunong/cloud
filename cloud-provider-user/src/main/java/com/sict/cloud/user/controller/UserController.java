@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -24,7 +25,7 @@ public class UserController {
     @Value("${server.port}")
     private String serverPort;
 
-    @Autowired
+    @Resource
     private IUserService userService;
 
     @GetMapping(value = "/payment/nacos/{id}")

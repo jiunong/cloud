@@ -1,0 +1,16 @@
+server:
+  port: 8888
+
+spring:
+    application:
+      name: cloud-config-gateway
+    cloud:
+      gateway:
+        enabled: true
+        routes:
+          - id : cloud-provider-user
+            uri : http://localhost:9001
+            predicates :
+              - Path=/user/**
+
+

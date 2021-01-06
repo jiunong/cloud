@@ -10,6 +10,7 @@
 
     <modules>
         <module>cloud-provider-user</module>
+        <module>cloud-config-gateway</module>
     </modules>
 
     <!-- 需要依赖spring boot -->
@@ -25,7 +26,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.version>4.12</junit.version>
         <log4j.version>1.2.17</log4j.version>
-        <lombok.version>1.16.18</lombok.version>
+        <lombok.version>1.18.16</lombok.version>
         <mysql.version>5.1.35</mysql.version>
         <druid.version>1.0.18</druid.version>
         <druid.spring.boot.starter.version>1.1.10</druid.spring.boot.starter.version>
@@ -50,7 +51,6 @@
     </dependencyManagement>
     <!-- 这一部分的内容所有module都会映入的依赖 -->
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -61,17 +61,16 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
+
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
-
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -91,7 +90,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.16</version>
+            <version>${lombok.version}</version>
         </dependency>
 
     </dependencies>

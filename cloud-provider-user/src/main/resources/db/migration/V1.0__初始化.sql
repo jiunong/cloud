@@ -5,8 +5,8 @@ CREATE DATABASE cloud_user DEFAULT CHARSET utf8mb4;
 USE cloud_user;
 
 -- 用户组表
-DROP TABLE IF EXISTS groups;
-CREATE TABLE groups
+DROP TABLE IF EXISTS `groups`;
+CREATE TABLE `groups`
 (
     id           VARCHAR(20) PRIMARY KEY COMMENT 'id',
     parent_id    VARCHAR(20)  NOT NULL COMMENT '用户组父id',
