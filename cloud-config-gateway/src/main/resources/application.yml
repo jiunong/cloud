@@ -12,5 +12,11 @@ spring:
             uri : http://localhost:9001
             predicates :
               - Path=/user/**
-
+        discovery:
+          locator:
+            enabled: false
+            lower-case-service-id: true
+      nacos:
+        discovery:
+          server-addr: 192.168.80.131:8848
 

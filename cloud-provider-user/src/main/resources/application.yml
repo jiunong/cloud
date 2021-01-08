@@ -9,9 +9,9 @@ spring:
         server-addr: 192.168.80.131:8848
     gateway:
       routes:
-        - id : user-router
+        - id: user-router
           uri: http://127.0.0.1:9001
-          predicates :
+          predicates:
             - After=2018-01-20T06:06:06+08:00[Asia/Shanghai]
   datasource:
     name: cloud_user
