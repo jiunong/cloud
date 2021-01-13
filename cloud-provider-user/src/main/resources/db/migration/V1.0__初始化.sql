@@ -1,8 +1,3 @@
-SET NAMES utf8;
-
-DROP DATABASE IF EXISTS cloud_user;
-CREATE DATABASE cloud_user DEFAULT CHARSET utf8mb4;
-USE cloud_user;
 
 -- 用户组表
 DROP TABLE IF EXISTS `groups`;
@@ -301,5 +296,5 @@ VALUES (101, 101, 101, now(), now(), 'system', 'system'),
        (107, 103, 102, now(), now(), 'system', 'system'),
        (108, 103, 103, now(), now(), 'system', 'system');
 
-INSERT INTO cloud_user.users (id, username, password, name, mobile, description, deleted, enabled, account_non_expired, credentials_non_expired, account_non_locked, created_time, updated_time, created_by, updated_by)
+INSERT INTO users (id, username, password, name, mobile, description, deleted, enabled, account_non_expired, credentials_non_expired, account_non_locked, created_time, updated_time, created_by, updated_by)
 VALUES ('11', 'cloud', '1', '1', '1', '1', '1', 1, 1, 1, 1, '2020-12-29 21:37:02', '2020-12-29 21:37:02', '1', '1');
