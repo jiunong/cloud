@@ -15,8 +15,8 @@ spring:
             - After=2018-01-20T06:06:06+08:00[Asia/Shanghai]
   datasource:
     name: cloud_user
-    driver-class-name: com.mysql.jdbc.Driver
-    url:  jdbc:mysql://192.168.80.131:3306/cloud_user?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:  jdbc:mysql://192.168.80.131:3306/cloud?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
     username: root
     password: 1qaz
     type: com.alibaba.druid.pool.DruidDataSource
