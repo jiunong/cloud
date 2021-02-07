@@ -16,7 +16,7 @@ spring:
   datasource:
     name: cloud_user
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url:  jdbc:mysql://192.168.80.131:3306/cloud?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    url:  jdbc:mysql://192.168.80.131:3306/cloud?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: 1qaz
     type: com.alibaba.druid.pool.DruidDataSource
